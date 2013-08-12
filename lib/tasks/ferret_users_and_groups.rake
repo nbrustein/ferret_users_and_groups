@@ -11,8 +11,8 @@ module FerretUsersAndGroupsRakeHelper
     Ferret::Feature::DirectUpdater.new(
       {
         'subject_uri' => 'ferret:user_group:super_admin', 
-        'object_uri' => 'anything', 
-        'feature_type' => 'has_permissions'
+        'feature_type' => 'has_permissions',
+        'object_uri' => 'anything'
       }, 
       {
         'read' => true, 
@@ -23,7 +23,6 @@ module FerretUsersAndGroupsRakeHelper
       Time.now, 
       {}
     ).update
-    puts "Created super_admin group"
   end
     
 end
